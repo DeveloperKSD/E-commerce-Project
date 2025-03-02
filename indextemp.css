@@ -1,8 +1,9 @@
 body {
-    background-color: #f5f1eb;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding-top: calc(var(--marquee-height) + 120px);
+  background-color: #f5f1eb;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 
@@ -16,13 +17,16 @@ body {
 }
 
 .marquee {
-  width: var(--marquee-width);
+  width: 100%;
   height: var(--marquee-height);
   background-color: #111;
   color: #eee;
   overflow: hidden;
-  position: relative;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
 }
+
 .marquee:before, .marquee:after {
   position: relative;
   top: 0;
@@ -133,11 +137,14 @@ body {
 
 /*navbar*/
 .navbar {
-    position: relative;
-    display: flex; /* Use flexbox */
-    justify-content: space-between; /* Space out items */
-    background-color: #d1c4ae; /* Light background color */
-    height: 120px;
+  position: fixed;
+  top: var(--marquee-height);
+  width: 100%;
+  display: flex; /* Use flexbox */
+  justify-content: space-between; /* Space out items */
+  background-color: #d1c4ae; /* Light background color */
+  height: 120px;
+  z-index: 999;
 }
 
 .nav-links {
@@ -545,7 +552,7 @@ body {
 
 
 
-
+/*Footer*/
 .footer { 
   background-color: #333; 
   color: #fff; 
