@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <!-- Include SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.0/dist/sweetalert2.min.css">
+   
+    
+    <title>ARK: Login</title>
+</head>
+<body>
+    <div class="marquee">
+        <ul class="marquee-content">
+          <li>Special Offer: Get 10% off on your first purchase!</li>
+          <li>Limited Time: Free shipping on orders over ₹499!</li>
+          <li>New Arrivals: Check out our latest collection!</li>
+          <li>Sale: Up to 50% off on selected items!</li>
+        </ul>
+      </div>
+
+
+    <div>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-md">
+            <div class="dropdown">
+                <button class="dropbtn">≡</button>
+                <div class="dropdown-content">
+                    <a href="indextemp.html">🏠 HOME</a>
+                    <div class="sub-dropdown">
+                        <a href="products.html">🛍️ PRODUCTS  ▸</a>
+                        <div class="sub-dropdown-content">
+                            <a href="products.html">🚪 All Products</a>
+                            <a href="livingroom.html">🛋️ Living Room </a>
+                            <a href="bedroom.html">🛏️ Bedroom</a>
+                            <a href="office.html">💼 Office</a>
+                            <a href="decor.html">🖼️ Decor</a>
+                            <a href="petfurniture.html">🐾 Pet-Friendly </a>
+                            <a href="babyfurniture.html">👶 Baby Furniture</a>
+                        </div>
+                    </div>
+                    <a href="#contact-us">📞 CONTACT US</a>
+                    <a href="#find-us">📍FIND US</a>
+                    <a href="#">❓FAQs</a>
+                    <a href="#about-us">ℹ️ ABOUT US</a>
+                </div>
+            </div>
+
+            <div class="nav-links">
+                <a href="indextemp.html"><img id="logoimg" src="Assets/logo.png" group="logoimg"></a>
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <div class="search-container">
+                        <div class="search-box">
+                            <input type="text" class="search-input" placeholder=" 🔍 Search for products, categories, or brands...">
+                            <div id="suggestions" class="search-suggestions" style="display: none;"></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a group="navtext" href="#">
+                        <img src="Assets/icons/heart.png" alt="wishlist" id="usericons">
+                    </a>
+                </li>
+                <li>
+                    <a group="navtext" href="#">
+                        <img src="Assets/icons/shopping-cart.png" alt="usercart" id="usericons">
+                    </a>
+                </li>
+                <li><a href="login.html"><img id="usericons" src="Assets/icons/user.png"></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Login Page -->
+    <div class="login-container">
+        <div class="login-box">
+            <h1><i>Welcome Back</i></h1>
+            <form id="login-form">
+                <input 
+                    type="email" 
+                    id="email" 
+                    placeholder="Email Address" 
+                    required 
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+                    title="Please enter a valid email address">
+                
+                <input 
+                    type="password" 
+                    id="password" 
+                    placeholder="Password" 
+                    required 
+                    minlength="6" 
+                    title="Password must be at least 6 characters long">
+                
+                <button type="submit">Log In</button>
+            </form>
+            <p><a href="#" id="bottomtext">Forgot Password?</a> | <a href="createacc.html" id="bottomtext">Create an Account</a></p>
+            <div id="error-message" class="error-message"></div>
+        </div>
+    </div>
+      
+<!-- Include SweetAlert2 JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.0/dist/sweetalert2.min.js"></script>
+
+    <script src="login.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marquee3000/1.1.0/marquee3k.min.js"></script>
+</body>
+</html>

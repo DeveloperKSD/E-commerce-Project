@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-md">
+            <div class="dropdown">
+                <button class="dropbtn">≡</button>
+                <div class="dropdown-content">
+                    <a href="indextemp.html">🏠 HOME</a>
+                    <div class="sub-dropdown">
+                        <a href="products.html">🛍️ PRODUCTS  ▸</a>
+                        <div class="sub-dropdown-content">
+                            <a href="products.html">🚪 All Products</a>
+                            <a href="livingroom.html">🛋️ Living Room </a>
+                            <a href="bedroom.html">🛏️ Bedroom</a>
+                            <a href="office.html">💼 Office</a>
+                            <a href="decor.html">🖼️ Decor</a>
+                            <a href="petfurniture.html">🐾 Pet-Friendly </a>
+                            <a href="babyfurniture.html">👶 Baby Furniture</a>
+                        </div>
+                    </div>
+                    <a href="#contact-us">📞 CONTACT US</a>
+                    <a href="#find-us">📍FIND US</a>
+                    <a href="#">❓FAQs</a>
+                    <a href="#about-us">ℹ️ ABOUT US</a>
+                </div>
+            </div>
+
+            <div class="nav-links">
+                <a href="indextemp.html"><img id="logoimg" src="Assets/logo.png" group="logoimg"></a>
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <div class="search-container">
+                        <div class="search-box">
+                            <input type="text" class="search-input" placeholder="🔍 Search for products, categories, or brands...">
+                            <div id="suggestions" class="search-suggestions" style="display: none;"></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a group="navtext" href="#">
+                        <img src="Assets/icons/heart.png" alt="wishlist" id="usericons">
+                    </a>
+                </li>
+                <li>
+                    <a group="navtext" href="#">
+                        <img src="Assets/icons/shopping-cart.png" alt="usercart" id="usericons">
+                    </a>
+                </li>
+                <li><a href="login.html"><img id="usericons" src="Assets/icons/user.png"></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main class="dashboard-container">
+        <div class="user-info">
+          <img src="user-avatar.jpg" alt="User Avatar" id="user-avatar">
+          <h2 id="user-name">Welcome back, [Username]!</h2>
+          <p>Email: <span id="user-email">user@example.com</span></p>
+          <p>Phone: <span id="user-phone">+1234567890</span></p>
+        </div>
+    
+        <div class="actions">
+          <button onclick="window.location.href='settings.html'">Account Settings</button>
+          <button onclick="window.location.href='order-history.html'">Order History</button>
+        </div>
+    
+        <div class="logout-button">
+          <button id="logoutBtn">Logout</button>
+        </div>
+      </main>
+    
+      <footer>
+        <p>&copy; 2025 ARK. All rights reserved.</p>
+      </footer>
+    
+      <script src="dashboard.js"></script>
+    </body>
+    </html>
