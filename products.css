@@ -67,7 +67,7 @@ body {
   color: black;
   padding-top: 50px;
   padding-left: 30px;
-  font-size: 40px;
+  font-size: 30px;
   border: none;
 }
 
@@ -105,10 +105,10 @@ body {
 .sub-dropdown-content {
   display: none;
   position: absolute;
-  left: 160px; /* Align it next to the main dropdown */
+  left: 100%; /* Align it next to the main dropdown */
   top: 0;
   background-color: #f1f1f1;
-  min-width: 160px;
+  min-width: 180px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
@@ -129,8 +129,6 @@ body {
 .sub-dropdown-content a:hover {
   background-color: lightcoral;
 }
-
-
 
 
 /*navbar*/
@@ -164,8 +162,8 @@ body {
 }
 
 #usericons{
-    width: 40px;
-    padding-left: 15px;
+    width: 30px;
+    padding-left: 10px;
     padding-right:5px;
 }
 
@@ -181,7 +179,7 @@ body {
     width: 160px;
     height: auto;
     border-radius: 45px;
-    margin-left: 10%;
+    margin-left: 0%;
 }
 
 /*SEARCH BAR*/
@@ -193,19 +191,21 @@ body {
 }
 
 .search-box {
-  position: relative;
-  width: 20;
+  position: fixed;
+  width: 100%;
   max-width: 500px;
 }
 
 .search-input {
-  width: 220%;
-  height:125%;
+  max-width: 500px;
+  width: 100%;
+  height: 40px;
   font-size: 16px;
-  border: 10px solid #ccc;
-  border-radius: 25px;
+  border: 3px solid #ccc;
+  border-radius: 10px;
   outline: none;
 }
+
 
 .search-suggestions {
   position: absolute;
@@ -234,6 +234,43 @@ body {
   color: #666;
 }
 
+/*highlight*/
+.product-container {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+  display: flex; 
+  align-items: center; 
+  padding: 20px; 
+  border: 1px solid #ddd; 
+  margin: 20px; 
+} 
+
+.product-image { 
+  flex: 2; 
+  max-width: 800px; 
+  margin-right: 20px; 
+} 
+
+.product-image img { 
+  width: 700px; 
+  height: 100%; 
+} 
+
+.product-details { 
+  flex: 1; 
+} 
+
+.product-title { 
+  font-weight: bold;
+  font-size: 24px; 
+  margin-bottom: 10px; 
+} 
+
+.product-description { 
+  padding-top: 20px;
+  font-size: 16px; 
+}
+
+
 /*PRODUCT CATEGORY BENTO*/
 .category-container { 
   padding-top: 10px;
@@ -241,7 +278,7 @@ body {
   padding-left: 50px;
   display: grid; 
   gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); 
+  grid-template-columns: repeat(auto-fit, minmax(80px, 0.5fr)); 
 } 
 
 .category-item { 
@@ -250,7 +287,8 @@ body {
   padding: 5px; 
   text-align: center;
   color: rgb(30, 25, 0);
-  background-color:#fff7e0; 
+  background-color:#fff7e0;
+  transition: all 0.3s ease-in-out; 
 } 
 
 .category-item img { 
@@ -261,15 +299,121 @@ body {
 
 .category-item:hover { 
   box-shadow: 0 0 10px rgba(0,0,0,0.2); 
+  background-color: #d1c4ae;
 }
+
+.active-category {
+  background-color: #a7926e; /* Highlight color */
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+
+/* 🌟 GENERAL BUTTON STYLES */
+button {
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+/* 🌟 FILTER & SORT CONTAINER */
+.filter-sort-container {
+  display: flex;
+  justify-content: center; /* Centers buttons */
+  align-items: center;
+  gap: 10px; /* Space between buttons */
+  margin: 10px;
+}
+
+/* 🌟 FILTER BUTTON (💲 Button that opens the price filter) */
+.filter-btn {
+  background: #a7926e;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+}
+
+.filter-btn:hover {
+  background: #321416;
+}
+
+/* 🌟 SORTING BUTTONS (Low to High & High to Low) */
+.sort-filter {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #a7926e;
+  color: rgb(255, 255, 255);
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+.sort-filter:hover {
+  background: #321416;
+}
+
+/* 🔹 ACTIVE SORT BUTTON - When a sorting option is selected */
+.sort-filter.active-sort {
+  background: #d1c4ae;
+  color: black;
+  font-weight: bold;
+}
+
+/* 🌟 PRICE FILTER CONTAINER */
+.price-filter {
+  background: #fff7e0;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 8px;
+  margin: 10px auto;
+  width: fit-content;
+}
+
+/* 🔹 PRICE FILTER INPUT FIELDS */
+.price-filter input {
+  width: 80px;
+  padding: 5px;
+  border: 1px solid #cdb99b;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* 🌟 APPLY & RESET BUTTONS */
+.price-filter button {
+  background: #a7926e;
+  color: white;
+  padding: 5px;
+}
+
+.price-filter button:hover {
+  background: #321416;
+}
+
+/* 🔹 RESET BUTTON (for Price Filter) */
+.reset-btn {
+  background: red;
+}
+
+.reset-btn:hover {
+  background: darkred;
+}
+
+
+
 
 /*PRODUCT BENTO*/
 .bento-container { 
     padding-right: 20px;
     padding-left: 20px;
+    padding-top: 10px;
     display: grid; 
     gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
 } 
 
 .bento-item { 
@@ -287,6 +431,8 @@ body {
 
 .bento-item:hover { 
     box-shadow: 0 0 10px rgba(0,0,0,0.2); 
+    transform: scale(1.03);
+    transition: transform 0.3s ease-in-out;
 }
 
 .product-buttons { 
@@ -305,6 +451,7 @@ body {
   margin: 4px 2px; 
   cursor: pointer; 
   border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
 } 
 
 .product-buttons button.rent { 
@@ -320,7 +467,7 @@ body {
 .footer { 
     background-color: #333; 
     color: #fff; 
-    padding: 20px 0; 
+    padding: 20px; 
     text-align: center; 
     font-style: italic;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
