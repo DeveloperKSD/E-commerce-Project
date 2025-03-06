@@ -325,7 +325,7 @@ button {
   justify-content: center; /* Centers buttons */
   align-items: center;
   gap: 10px; /* Space between buttons */
-  margin: 10px;
+  margin: 10px auto;
 }
 
 /* 🌟 FILTER BUTTON (💲 Button that opens the price filter) */
@@ -340,21 +340,20 @@ button {
   background: #321416;
 }
 
-/* 🌟 SORTING BUTTONS (Low to High & High to Low) */
+/* 🌟 SORTING BUTTONS */
 .sort-filter {
-  padding-top: 20px;
-  padding-bottom: 20px;
   background: #a7926e;
-  color: rgb(255, 255, 255);
+  color: white;
   padding: 8px 12px;
   font-size: 14px;
+  cursor: pointer;
 }
 
 .sort-filter:hover {
   background: #321416;
 }
 
-/* 🔹 ACTIVE SORT BUTTON - When a sorting option is selected */
+/* 🔹 ACTIVE SORT BUTTON - Highlights the selected sort option */
 .sort-filter.active-sort {
   background: #d1c4ae;
   color: black;
@@ -402,7 +401,6 @@ button {
 .reset-btn:hover {
   background: darkred;
 }
-
 
 
 

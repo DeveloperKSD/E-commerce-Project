@@ -223,3 +223,47 @@ function sortProducts(sortType) {
 // Event listeners for sorting
 sortLowHighBtn.addEventListener("click", () => sortProducts("low-to-high"));
 sortHighLowBtn.addEventListener("click", () => sortProducts("high-to-low"));
+
+
+
+const sortAZBtn = document.getElementById("sort-a-z");
+const sortZABtn = document.getElementById("sort-z-a");
+
+// Function to sort products by name
+function sortProductsByName(order) {
+    let sortedProducts = [...products]; // Copy array to avoid modifying original
+
+    // If a category is active, filter products in that category first
+    if (activeCategory !== "All") {
+        sortedProducts = sortedProducts.filter(product => product.category === activeCategory);
+    }
+
+    // Toggle sorting off if the same button is clicked again
+    if (currentSort === order) {
+        // Reset to default order
+        currentSort = "default";
+        displayProducts(products); // Show original product order
+        removeActiveSort();
+    } else {
+        // Apply sorting
+        sortedProducts.sort((a, b) => {
+            return order === "a-z" ? a.name.localeCompare(b.name) : b.name.localeCompare(a.name);
+        });
+
+        currentSort = order;
+        displayProducts(sortedProducts);
+
+        // Update active button styles
+        removeActiveSort();
+        document.getElementById(`sort-${order}`).classList.add("active-sort");
+    }
+}
+
+// Function to remove active sort styles
+function removeActiveSort() {
+    document.querySelectorAll(".sort-filter button").forEach(btn => btn.classList.remove("active-sort"));
+}
+
+// Event listeners for sorting
+sortAZBtn.addEventListener("click", () => sortProductsByName("a-z"));
+sortZABtn.addEventListener("click", () => sortProductsByName("z-a"));
