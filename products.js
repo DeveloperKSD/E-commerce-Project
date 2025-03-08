@@ -74,24 +74,30 @@ const productContainer = document.querySelector(".bento-container");
 const categoryItems = document.querySelectorAll(".category-item");
 let activeCategory = "All"; // Keeps track of the currently selected category
 
-// Function to display products
-function displayProducts(filteredProducts) {
+function displayProducts() {
     productContainer.innerHTML = ""; // Clear existing content
-    filteredProducts.forEach(product => {
+    products.forEach(product => {
         const productHTML = `
             <div class="bento-item"> 
                 <img src="${product.img}" alt="${product.name}"> 
                 <h3>${product.name}</h3> 
                 <p>₹${product.price}</p> 
                 <div class="product-buttons"> 
-                    <button class="buy">Buy</button> 
-                    <button class="rent">Rent</button>
+                    <a href="product-details.html?id=${product.id}&action=buy">
+                        <button class="buy">Buy</button>
+                    </a>
+                    <a href="product-details.html?id=${product.id}&action=rent">
+                        <button class="rent">Rent</button>
+                    </a>
                 </div>
             </div> 
         `;
         productContainer.innerHTML += productHTML;
     });
 }
+
+// Call the function to display products
+displayProducts();
 
 // Function to filter products by category
 function filterProducts(category) {
@@ -267,3 +273,8 @@ function removeActiveSort() {
 // Event listeners for sorting
 sortAZBtn.addEventListener("click", () => sortProductsByName("a-z"));
 sortZABtn.addEventListener("click", () => sortProductsByName("z-a"));
+
+
+function viewProductDetails(productId) {
+    window.location.href = `product-details.html?id=${productId}`;
+}

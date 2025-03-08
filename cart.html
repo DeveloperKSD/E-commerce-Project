@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARK: Home</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <div class="marquee">
+        <ul class="marquee-content">
+          <li>Special Offer: Get 10% off on your first purchase!</li>
+          <li>Limited Time: Free shipping on orders over ₹499!</li>
+          <li>New Arrivals: Check out our latest collection!</li>
+          <li>Sale: Up to 50% off on selected items!</li>
+        </ul>
+    </div>
+    <div>
+        <nav class="navbar navbar-expand-md">
+            <div class="dropdown">
+                <button class="dropbtn">≡</button>
+                <div class="dropdown-content">
+                    <a href="indextemp.html">🏠 HOME</a>
+                    <div class="sub-dropdown">
+                        <a href="products.html">🛍️ PRODUCTS  ▸</a>
+                        <div class="sub-dropdown-content">
+                            <a href="products.html">🚪 All Products</a>
+                            <a href="livingroom.html">🛋️ Living Room </a>
+                            <a href="bedroom.html">🛏️ Bedroom</a>
+                            <a href="office.html">💼 Office</a>
+                            <a href="decor.html">🖼️ Decor</a>
+                            <a href="petfurniture.html">🐾 Pet-Friendly </a>
+                            <a href="babyfurniture.html">👶 Baby Furniture</a>
+                        </div>
+                    </div>
+                    <a href="#contact-us">📞 CONTACT US</a>
+                    <a href="#find-us">📍FIND US</a>
+                    <a href="#">❓FAQs</a>
+                    <a href="#about-us">ℹ️ ABOUT US</a>
+                    
+                </div>
+            </div>
+        
+            <div class="nav-links">
+                <a href="indextemp.html"><img id="logoimg" src="Assets/logo.png" group="logoimg"></a>
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <div class="search-container">
+                        <div class="search-box">
+                            <input type="text" class="search-input" placeholder="🔍 Search for products, categories, or brands...">
+                            <div id="suggestions" class="search-suggestions" style="display: none;"></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a group="navtext" href="#">
+                        <img src="Assets/icons/heart.png" alt="wishlist" id="usericons">
+                    </a>
+                </li>
+                <li>
+                    <a group="navtext" href="#">
+                        <img src="Assets/icons/shopping-cart.png" alt="usercart" id="usericons">
+                    </a>
+                </li>
+                <li><a href="login.html"><img id="usericons" src="Assets/icons/user.png"></a></li>
+            </ul>
+        </nav>
+    </div>
+    <main class="cart-wrapper">
+        <!-- Cart Items Section -->
+        <div class="cart-container">
+            <div id="cart-items" class="cart-items">
+                <div class="cart-item">
+                    <img src="PRODUCT_IMAGE" alt="PRODUCT_NAME">
+                    <div class="cart-item-details">
+                        <h4>PRODUCT_NAME</h4>
+                        <p>Price: ₹PRICE</p>
+                    </div>
+                    <div class="cart-item-quantity">
+                        <button class="quantity-btn">-</button>
+                        <input type="text" value="1" readonly>
+                        <button class="quantity-btn">+</button>
+                    </div>
+                    <button class="remove-btn">Remove</button>
+                </div>
+                
+            </div>
+    
+            <!-- Empty Cart Message -->
+            <div id="empty-cart" class="empty-cart">
+                <h3>Your cart is empty 😢</h3>
+                <p>Explore our best picks below!</p>
+                <div class="recommended-products" id="recommended-products"></div>
+            </div>
+        </div>
+    
+        <!-- Cart Summary Section -->
+        <div class="cart-summary">
+            <h3>Order Summary</h3>
+            <p>Subtotal: <span id="subtotal">₹0</span></p>
+            <p>Shipping: <span id="shipping">Free</span></p>
+            <p><strong>Total: <span id="total">₹0</span></strong></p>
+            <button class="checkout-btn">Proceed to Checkout</button>
+            <button class="empty-cart-btn" onclick="emptyCart()">Empty Cart</button>
+        </div>
+    </main>
+    
+
+
+
+    <script src="cart.js"></script>
+</body>
+</html>

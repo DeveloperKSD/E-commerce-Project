@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="product-details.css">
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARK: Products</title>
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+    <div class="marquee">
+        <ul class="marquee-content">
+          <li>Special Offer: Get 10% off on your first purchase!</li>
+          <li>Limited Time: Free shipping on orders over ₹499!</li>
+          <li>New Arrivals: Check out our latest collection!</li>
+          <li>Sale: Up to 50% off on selected items!</li>
+        </ul>
+    </div>
+    <div>
+        <nav class="navbar navbar-expand-md">
+            <div class="dropdown">
+                <button class="dropbtn">≡</button>
+                <div class="dropdown-content">
+                    <a href="indextemp.html">🏠 HOME</a>
+                    <div class="sub-dropdown">
+                        <a href="products.html">🛍️ PRODUCTS  ▸</a>
+                        <div class="sub-dropdown-content">
+                            <a href="products.html">🚪 All Products</a>
+                            <a href="products.html?category=Living Room">🛋️ Living Room</a>
+                            <a href="products.html?category=Bedroom">🛏️ Bedroom</a>
+                            <a href="products.html?category=Office">💼 Office</a>
+                            <a href="products.html?category=Decor">🖼️ Decor</a>
+                            <a href="products.html?category=Pet-Friendly">🐾 Pet-Friendly </a>
+                            <a href="products.html?category=Baby Furniture">👶 Baby Furniture</a>
+                        </div>
+                    </div>
+                    <a href="#contact-us">📞 CONTACT US</a>
+                    <a href="#find-us">📍FIND US</a>
+                    <a href="#">❓FAQs</a>
+                    <a href="#about-us">ℹ️ ABOUT US</a>
+                    
+                </div>
+            </div>
+        
+            <div class="nav-links">
+                <a href="indextemp.html"><img id="logoimg" src="Assets/logo.png" group="logoimg"></a>
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <div class="search-container">
+                        <div class="search-box">
+                            <input type="text" class="search-input" placeholder="🔍 Search for products, categories, or brands...">
+                            <div id="suggestions" class="search-suggestions" style="display: none;"></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a group="navtext" href="#">
+                        <img src="Assets/icons/heart.png" alt="wishlist" id="usericons">
+                    </a>
+                </li>
+                <li>
+                    <a group="navtext" href="cart.html">
+                        <img src="Assets/icons/shopping-cart.png" alt="usercart" id="usericons">
+                        <span id="cart-badge" class="cart-badge">0</span>
+                    </a>
+                </li>
+                <li><a href="login.html"><img id="usericons" src="Assets/icons/user.png"></a></li>
+            </ul>
+        </nav>
+        
+
+    <nav class="navbar">
+        <a href="products.html"><img id="usericons" src="Assets/icons/arrow.png"></a>
+    </nav>
+
+    <main class="product-details-container">
+        <div class="product-image">
+            <img id="product-img" src="" alt="Product Image">
+        </div>
+        <div class="product-info">
+            <h1 id="product-name"></h1>
+            <p id="product-price"></p>
+            <p id="product-description"></p>
+
+            <!-- Color Selection -->
+            <label for="color">Choose Color:</label>
+            <select id="color">
+                <option value="Default">Default</option>
+                <option value="Red">Red</option>
+                <option value="Blue">Blue</option>
+                <option value="Black">Black</option>
+            </select>
+
+            <!-- Add to Cart Button -->
+            <button id="add-to-cart">Add to Cart</button>
+            <br>
+            <br>
+            <button id="view-cart"><a href="cart.html">View Cart</a></button>
+        </div>
+    </main>
+
+    
+<!--Footer Section-->
+<footer class="footer"> 
+    <div class="container"> 
+        <div class="mainSection" style="text-align: left;"> 
+            <center><img id="footerlogo" src="Assets/logo.png" href="#"></center>
+            <h3><center>Furnish with Love</center></h3> 
+            <p><b>Welcome to ARK!</b> We’re all about creating <b>smart</b>, <b>adaptable</b> furniture that’s as <b>affordable</b> as it is <b>awesome.</b></p>
+            <p>Whether you’re a renter, a nester, or a space-obsessed creative, our <b>sustainable designs</b> are here to keep your home chic, organized, and totally you.</p>
+            <p>At ARK, we make sustainability look good and feel effortless.</p>
+            <p>From first apartments to forever homes, we’ve got you covered :)</p>
+        </div> 
+        <div class="section" style="text-align: right;">
+            <h3>Products</h3>
+            <ul>
+                <li><a href="#">Sofas</a></li> 
+                <li><a href="#">Armchairs</a></li>
+                <li><a href="#">Beds</a></li> 
+                <li><a href="#">Coffee Tables</a></li> 
+                <li><a href="#">Chairs</a></li>
+                <li><a href="#">Cupboards</a></li>
+                <li><a href="#">Storage Solutions</a></li>
+                <li><a href="#">Pet-Friendly Furniture</a></li>
+                <li><a href="#">Cribs</a></li>
+            </ul>
+
+            <h3 class="lowerSection1">Resources</h3> 
+            <ul> 
+                <li><a href="#">Blogs</a></li> 
+                <li><a href="#">Newsletter</a></li> 
+                <li><a href="#">Reviews</a></li> 
+            </ul>
+        </div>
+        <div class="section" style="text-align: right;"> 
+            <h3>Quick Links</h3> 
+            <ul> 
+                <li><a href="#">About Us</a></li> 
+                <li><a href="#">Contact</a></li> 
+                <li><a href="#">FAQ</a></li> 
+                <li><img id="mediaLOGOs" src="Assets/icons/instagram.png"><img id="mediaLOGOs" src="Assets/icons/twitter (1).png"><img id="mediaLOGOs" src="Assets/icons/youtube.png"></li>
+            </ul> 
+
+            <h3 class="lowerSection2">Customer Service</h3> 
+            <ul> 
+                <li><a href="/shipping">Shipping Information</a></li> 
+                <li><a href="/returns">Returns & Exchanges</a></li> 
+                <li><a href="/terms">Terms of Service</a></li> 
+                <li><a href="/privacy">Privacy Policy</a></li> 
+            </ul> 
+        </div> 
+    </div> 
+    <p id="copyright">&copy; 2025 Ark Furniture. All rights reserved.</p> 
+</footer>
+   
+    <script src="product-details.js"></script>
+</body>
+</html>
