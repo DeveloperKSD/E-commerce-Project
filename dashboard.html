@@ -7,6 +7,14 @@
   <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
+    <div class="marquee">
+        <ul class="marquee-content">
+          <li>Special Offer: Get 10% off on your first purchase!</li>
+          <li>Limited Time: Free shipping on orders over ₹499!</li>
+          <li>New Arrivals: Check out our latest collection!</li>
+          <li>Sale: Up to 50% off on selected items!</li>
+        </ul>
+    </div>
     <div>
         <!-- Navbar -->
         <nav class="navbar navbar-expand-md">
@@ -60,7 +68,7 @@
         </nav>
     </div>
 
-    <main class="dashboard-container">
+    <div class="dashboard-container">
         <div class="user-info">
           <img src="user-avatar.jpg" alt="User Avatar" id="user-avatar">
           <h2 id="user-name">Welcome back, [Username]!</h2>
@@ -76,11 +84,9 @@
         <div class="logout-button">
           <button id="logoutBtn">Logout</button>
         </div>
-      </main>
+    </div>
     
-      <footer>
-        <p>&copy; 2025 ARK. All rights reserved.</p>
-      </footer>
+    <p>&copy; 2025 ARK. All rights reserved.</p>
     
       <script src="dashboard.js"></script>
     </body>
